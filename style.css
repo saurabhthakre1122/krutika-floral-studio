@@ -1,0 +1,212 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
+}
+
+:root{
+--primary:#c89b7b;
+--light:#faf8f6;
+--soft:#f4efea;
+--text:#2c2c2c;
+}
+
+body{
+background:var(--light);
+color:var(--text);
+}
+
+/* NAVBAR */
+
+.navbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 60px;
+background:white;
+position:fixed;
+width:100%;
+z-index:1000;
+box-shadow:0 2px 15px rgba(0,0,0,0.05);
+}
+
+.brand h1{
+font-family:'Playfair Display',serif;
+font-size:28px;
+color:var(--primary);
+letter-spacing:2px;
+}
+
+.brand p{
+font-size:12px;
+color:#888;
+letter-spacing:3px;
+text-transform:uppercase;
+}
+
+nav a{
+margin-left:25px;
+text-decoration:none;
+color:#333;
+font-weight:500;
+}
+
+nav a:hover{
+color:var(--primary);
+}
+
+/* HERO */
+
+.hero{
+height:100vh;
+background:
+linear-gradient(rgba(255,255,255,.6),rgba(255,255,255,.7)),
+url("https://images.unsplash.com/photo-1523430410476-0185cb1f6ff8");
+background-size:cover;
+background-position:center;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+padding-top:80px;
+}
+
+.hero h1{
+font-family:'Playfair Display',serif;
+font-size:60px;
+}
+
+.hero p{
+margin:20px 0;
+font-size:18px;
+color:#555;
+}
+
+.btn{
+background:var(--primary);
+color:white;
+padding:14px 30px;
+border-radius:40px;
+text-decoration:none;
+font-weight:500;
+}
+
+.btn:hover{
+background:#b78664;
+}
+
+/* SERVICES */
+
+.services{
+padding:100px 60px;
+background:var(--soft);
+text-align:center;
+}
+
+.services h2{
+font-family:'Playfair Display',serif;
+font-size:40px;
+margin-bottom:40px;
+}
+
+.service-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.glass-card{
+background:white;
+padding:40px;
+border-radius:14px;
+box-shadow:0 10px 25px rgba(0,0,0,0.08);
+transition:.4s;
+}
+
+.glass-card:hover{
+transform:translateY(-8px);
+}
+
+/* GALLERY */
+
+.gallery{
+padding:100px 60px;
+text-align:center;
+}
+
+.gallery h2{
+font-family:'Playfair Display',serif;
+font-size:40px;
+margin-bottom:40px;
+}
+
+.gallery-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:20px;
+}
+
+.gallery-grid img{
+width:100%;
+height:320px;
+object-fit:cover;
+border-radius:15px;
+transition:.4s;
+}
+
+.gallery-grid img:hover{
+transform:scale(1.05);
+}
+
+/* CONTACT */
+
+.contact{
+background:var(--soft);
+padding:90px;
+text-align:center;
+}
+
+.contact h2{
+font-family:'Playfair Display',serif;
+margin-bottom:30px;
+}
+
+/* FOOTER */
+
+footer{
+text-align:center;
+padding:25px;
+background:white;
+color:#666;
+}
+
+/* ROSE PETALS */
+
+.petals{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+pointer-events:none;
+overflow:hidden;
+z-index:999;
+}
+
+.petal{
+position:absolute;
+top:-50px;
+width:25px;
+height:25px;
+background-image:url("https://pngimg.com/uploads/rose/rose_PNG659.png");
+background-size:cover;
+animation:fall linear infinite;
+opacity:.8;
+}
+
+@keyframes fall{
+0%{transform:translateY(-50px) rotate(0deg);}
+100%{transform:translateY(110vh) rotate(360deg);}
+}
